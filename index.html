@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Access Countdown</title>
+    <title>TLK - Early Access Countdown</title>
     <style>
         * {
             margin: 0;
@@ -25,6 +25,15 @@
         .container {
             text-align: center;
             max-width: 500px;
+        }
+        
+        .game-title {
+            font-size: 72px;
+            font-weight: bold;
+            letter-spacing: 12px;
+            color: #00d9ff;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+            margin-bottom: 40px;
         }
         
         .hourglass {
@@ -74,10 +83,32 @@
             font-size: 14px;
             color: #888;
         }
+        
+        .description {
+            margin-top: 50px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+        
+        .description h2 {
+            font-size: 20px;
+            color: #00d9ff;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .description p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="game-title">TLK</div>
         <div class="hourglass">⏳</div>
         <div class="countdown" id="countdown">Loading...</div>
         <div class="label">UNTIL EARLY ACCESS</div>
@@ -85,11 +116,17 @@
             <div class="progress-bar" id="progressBar"></div>
         </div>
         <div class="progress-text" id="progressText">0% complete</div>
-    </div>
+        
+        <div class="description">
+            <h2>ABOUT THE GAME</h2>
+            <p>
+                A cozy top-down RPG that invites you to explore a small pixel art world at your own pace, and make meaningful choices.
+            </p>
+        </div>
 
     <script>
-        const targetDate = new Date('2027-12-31T23:59:59').getTime();
-        const startDate = new Date('2025-01-01T00:00:00').getTime(); // Rough dev start
+        const targetDate = new Date('2040-12-31T23:59:59').getTime();
+        const startDate = new Date('2026-01-01T00:00:00').getTime();
         
         function updateCountdown() {
             const now = new Date().getTime();
